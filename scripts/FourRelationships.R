@@ -294,6 +294,8 @@ rm(FirstDiseaseDay, LastDiseaseDay, NoDiseaseBirds, FirstDayEye6)
 # (TransmissionRate, ReplRateIndex, TimeToRecoverDie, and VirulenceIndex)
 # the relationships can be examined.
 
+# Att his point, these are the objects we have:
+# ReplRateIndex; TimeToRecoverDie; TransmissionRate; VirulenceIndex
 
 
   
