@@ -37,18 +37,11 @@
 #
 library(tidyverse)
 library(readxl)
-#
-#This is the office computer working directory.
-WorkingDir <- "D:/users/Wes/Projects/CLOnonCitSci/HOFI_related/Dhondt_transmission_2017/FourRelationshipsAnalyses_Oct2023"
-#This is the laptop working directory.
-WorkingDir <- "C:/Users/Wes/November2023Work/Dhondt_analyses/FourRelationshipsAnalyses_Oct2023"
-#
-#setwd(WorkingDir)
 
 
 #Read in raw data files. The second of these files will require substantial 
 # manipulation before it can be used.
-TransmissionRate <- read_xlsx("beta.xlsx",
+TransmissionRate <- read_xlsx("data/beta.xlsx",
                               sheet = "Sheet1")
 #
 #Commented out are the changes needed for the previous version of the second
@@ -95,7 +88,7 @@ TransmissionRate <- read_xlsx("beta.xlsx",
 #     other grouping variables like the isolate of the inoculum
 #First we do all of the corrections changes that each require a single line of
 # R code.
-OtherRawDataInput <- read_xlsx("index birds to DPI around 60.xlsx",
+OtherRawDataInput <- read_xlsx("data/index birds to DPI around 60.xlsx",
                               sheet = "all") %>%
   rename(isolate = "inoculum") %>%
   rename(BirdID = "Bird ID") %>%
