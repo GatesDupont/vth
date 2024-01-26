@@ -1,0 +1,8 @@
+summary(VirRepMod)
+summary(TransRepMod)
+summary(TransVirMod)
+summary(VirDurMod)
+summary(FitRepMod)
+summary(FitTransMod)
+summary(FitVirMod)
+summary(FitDurMod)

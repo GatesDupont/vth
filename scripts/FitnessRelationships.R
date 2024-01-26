@@ -51,7 +51,7 @@ df <- read_xlsx("data/Verified-data-for-Gates-25-Jan-2024.xlsx") %>%
 # FITNESS ~ REPLICATION
 # Model
 FitRepMod <- gam(fitness ~ s(replication) + s(isolate, bs = "re"), 
-                 family = nb(),
+                 family = tw(),
                  gamma = 1.4,
                  data = df)
 
@@ -71,7 +71,7 @@ p1 <- ggplot(FitRepPreds, aes(x = x, y = mean)) +
 # FITNESS ~ TRANSMISSION
 # Model
 FitTransMod <- gam(fitness ~ transmission + s(isolate, bs = "re"), 
-                   family = nb(),
+                   family = tw(),
                    gamma = 1.4,
                    data = df)
 
@@ -91,7 +91,7 @@ p2 <- ggplot(FitTransPreds, aes(x = x, y = mean)) +
 # FITNESS ~ VIRULENCE
 # Model
 FitVirMod <- gam(fitness ~ s(virulence) + s(isolate, bs = "re"), 
-                 family = nb(),
+                 family = tw(),
                  gamma = 1.4,
                  data = df)
 
@@ -111,7 +111,7 @@ p3 <- ggplot(FitVirPreds, aes(x = x, y = mean)) +
 # FITNESS ~ DURATION
 # Model
 FitDurMod <- gam(fitness ~ duration + s(isolate, bs = "re"), 
-                 family = nb(),
+                 family = tw(),
                  gamma = 1.4,
                  data = df)
 
