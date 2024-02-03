@@ -23,7 +23,7 @@ get_predictions <- function(fitted.model){
   preds <- predict.gam(
     fitted.model, 
     newdata = pred.df, 
-    exlucde = "s(isolate)",
+    exclude = "s(isolate)",
     type = "link",
     se = T)
   
